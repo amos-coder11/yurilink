@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { Marketing } from "@/components/Marketing";
 import { Videos } from "@/components/Videos";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { Youtube } from "@/components/Youtube";
 
 export default function HomePage() {
@@ -16,6 +17,7 @@ export default function HomePage() {
         <Videos />
         <Footer />
       </div>
+      <WhatsAppButton />
     </main>
   );
 }
