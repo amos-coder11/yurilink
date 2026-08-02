@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { LinkIcon } from "./icons";
+import { CardCaption } from "./CardCaption";
+import { LinkIcon, YouTubeIcon } from "./icons";
 import { useI18n } from "@/lib/i18n";
 
 const YOUTUBE_URL = "https://www.youtube.com/@ycnoticias";
@@ -12,7 +13,12 @@ export function Youtube() {
   return (
     <section className="amazon-section" id="youtube" aria-label="YouTube">
       <div className="videos-head">
-        <h2 className="videos-title">YouTube</h2>
+        <h2 className="videos-title">
+          <span className="videos-title-logo youtube" aria-hidden="true">
+            <YouTubeIcon size={18} />
+          </span>
+          YouTube
+        </h2>
         <a
           className="videos-more"
           href={YOUTUBE_URL}
@@ -29,19 +35,25 @@ export function Youtube() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            src="/assets/yurynoticias.png"
-            alt={t.youtubeAlt}
-            fill
-            priority
-            sizes="(max-width: 480px) 100vw, 440px"
-            style={{ objectFit: "cover", objectPosition: "center 25%" }}
+          <span className="amazon-card-shell">
+            <Image
+              src="/assets/yurynoticias.png"
+              alt={t.youtubeAlt}
+              fill
+              priority
+              sizes="(max-width: 480px) 100vw, 440px"
+              style={{ objectFit: "cover", objectPosition: "center 25%" }}
+            />
+            <span className="amazon-link-icon" aria-hidden="true">
+              <LinkIcon size={20} />
+            </span>
+            <div className="amazon-scrim" aria-hidden="true" />
+          <CardCaption
+            icon={<YouTubeIcon size={30} />}
+            iconClassName="youtube"
+            title={t.youtubeTitle}
           />
-          <span className="amazon-link-icon" aria-hidden="true">
-            <LinkIcon size={20} />
           </span>
-          <div className="amazon-scrim" aria-hidden="true" />
-          <p className="amazon-title">{t.youtubeTitle}</p>
         </a>
       </div>
     </section>

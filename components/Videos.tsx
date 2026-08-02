@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { PlayIcon } from "./icons";
+import { PlayIcon, TikTokIcon } from "./icons";
 import { useI18n } from "@/lib/i18n";
 
 const videos = [
@@ -37,7 +37,12 @@ export function Videos() {
   return (
     <section className="videos-section" id="videos" aria-label={t.videos}>
       <div className="videos-head">
-        <h2 className="videos-title">{t.videos}</h2>
+        <h2 className="videos-title">
+          <span className="videos-title-logo tiktok" aria-hidden="true">
+            <TikTokIcon size={15} />
+          </span>
+          {t.videos}
+        </h2>
         <a
           className="videos-more"
           href="https://www.tiktok.com/@hisweetiesshop"
@@ -58,20 +63,28 @@ export function Videos() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image
-                src={video.src}
-                alt={title}
-                fill
-                sizes="50vw"
-                style={{ objectFit: "cover" }}
-              />
-              <span className="video-play" aria-hidden="true">
-                <PlayIcon size={14} />
+              <span className="video-card-shell">
+                <Image
+                  src={video.src}
+                  alt={title}
+                  fill
+                  sizes="50vw"
+                  className="video-card-img"
+                  style={{ objectFit: "cover" }}
+                />
+                <span className="video-play" aria-hidden="true">
+                  <PlayIcon size={12} />
+                </span>
+                <div className="video-meta">
+                  <span className="video-meta-platform" aria-hidden="true">
+                    <TikTokIcon size={12} />
+                  </span>
+                  <div className="video-meta-copy">
+                    <strong>{title}</strong>
+                    <span>{video.handle}</span>
+                  </div>
+                </div>
               </span>
-              <div className="video-meta">
-                <strong>{title}</strong>
-                <span>{video.handle}</span>
-              </div>
             </a>
           );
         })}

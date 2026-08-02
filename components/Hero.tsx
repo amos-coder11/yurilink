@@ -22,10 +22,9 @@ export function Hero() {
       <div className="hero-scrim" aria-hidden="true" />
       <div className="hero-content">
         <div className="hero-name-row">
-          <h1 className="hero-brand">Yury</h1>
+          <h1 className="hero-brand">Yury Chacón</h1>
           <VerifiedBadge />
         </div>
-        <p className="hero-handle">@ycnoticias</p>
         <div className="hero-socials">
           <a
             className="hero-social youtube"

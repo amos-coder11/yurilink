@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import AmazonFillIcon from "@iconify-react/ri/amazon-fill";
+import { CardCaption } from "./CardCaption";
 import { LinkIcon } from "./icons";
 import { useI18n } from "@/lib/i18n";
 
@@ -12,7 +14,12 @@ export function Amazon() {
   return (
     <section className="amazon-section" id="amazon" aria-label="Amazon">
       <div className="videos-head">
-        <h2 className="videos-title">Amazon</h2>
+        <h2 className="videos-title">
+          <span className="videos-title-logo amazon" aria-hidden="true">
+            <AmazonFillIcon height="1.15em" />
+          </span>
+          Amazon
+        </h2>
         <a
           className="videos-more"
           href={AMAZON_URL}
@@ -29,19 +36,25 @@ export function Amazon() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            src="/assets/amazon.png"
-            alt={t.amazonAlt}
-            fill
-            priority
-            sizes="(max-width: 480px) 100vw, 440px"
-            style={{ objectFit: "cover", objectPosition: "center 30%" }}
-          />
-          <span className="amazon-link-icon" aria-hidden="true">
-            <LinkIcon size={20} />
+          <span className="amazon-card-shell">
+            <Image
+              src="/assets/amazon.png"
+              alt={t.amazonAlt}
+              fill
+              priority
+              sizes="(max-width: 480px) 100vw, 440px"
+              style={{ objectFit: "cover", objectPosition: "center 30%" }}
+            />
+            <span className="amazon-link-icon" aria-hidden="true">
+              <LinkIcon size={20} />
+            </span>
+            <div className="amazon-scrim" aria-hidden="true" />
+            <CardCaption
+              icon={<AmazonFillIcon height="1.9em" />}
+              iconClassName="amazon"
+              title={t.amazonTitle}
+            />
           </span>
-          <div className="amazon-scrim" aria-hidden="true" />
-          <p className="amazon-title">{t.amazonTitle}</p>
         </a>
       </div>
     </section>

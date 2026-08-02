@@ -18,6 +18,8 @@ type Translations = {
   tiktokNews: string;
   totalFollowers: string;
   youtubeMore: string;
+  youtubeBrand: string;
+  youtubeSubtitle: string;
   youtubeTitle: string;
   youtubeAlt: string;
   courses: string;
@@ -38,15 +40,19 @@ type Translations = {
   language: string;
   spanish: string;
   english: string;
+  footerBrandMuted: string;
+  footerBrandStrong: string;
 };
 
 const translations: Record<Lang, Translations> = {
   es: {
-    heroAlt: "Yury, creadora de contenido",
+    heroAlt: "Yury Chacón, creadora de contenido",
     tiktokBeauty: "TikTok Belleza",
     tiktokNews: "TikTok Noticias",
     totalFollowers: "Seguidores totales",
     youtubeMore: "Ver canal ›",
+    youtubeBrand: "YC Noticias",
+    youtubeSubtitle: "Noticias del día",
     youtubeTitle: "YC Noticias | Noticias del día",
     youtubeAlt: "YC Noticias — Noticias del día",
     courses: "Cursos",
@@ -67,13 +73,17 @@ const translations: Record<Lang, Translations> = {
     language: "Idioma",
     spanish: "Español",
     english: "English",
+    footerBrandMuted: "YC ",
+    footerBrandStrong: "Noticias",
   },
   en: {
-    heroAlt: "Yury, content creator",
+    heroAlt: "Yury Chacón, content creator",
     tiktokBeauty: "TikTok Beauty",
     tiktokNews: "TikTok News",
     totalFollowers: "Total Followers",
     youtubeMore: "View channel ›",
+    youtubeBrand: "YC News",
+    youtubeSubtitle: "News of the day",
     youtubeTitle: "YC News | News of the day",
     youtubeAlt: "YC News — News of the day",
     courses: "Courses",
@@ -94,6 +104,8 @@ const translations: Record<Lang, Translations> = {
     language: "Language",
     spanish: "Español",
     english: "English",
+    footerBrandMuted: "YC ",
+    footerBrandStrong: "News",
   },
 };
 

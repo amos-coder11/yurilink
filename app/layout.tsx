@@ -1,35 +1,30 @@
 import type { Metadata } from "next";
-import { Great_Vibes, Poppins } from "next/font/google";
+import { Oswald } from "next/font/google";
 import { Providers } from "@/components/Providers";
 import "./globals.css";
 
-const greatVibes = Great_Vibes({
-  weight: "400",
+const oswald = Oswald({
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
-  variable: "--font-great-vibes",
-  display: "swap",
-});
-
-const poppins = Poppins({
-  weight: ["400", "500", "600", "700", "800"],
-  subsets: ["latin"],
-  variable: "--font-poppins",
+  variable: "--font-oswald",
   display: "swap",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("http://localhost:3000"),
-  title: "Yury | Creadora de Contenido & TikTok Shop",
+  title: "Yury Chacón | Creadora de Contenido & TikTok Shop",
   description:
-    "Yury — creadora de contenido y vendedora en TikTok Shop. Belleza, skincare, moda y hallazgos virales.",
+    "Yury Chacón — creadora de contenido, YC Noticias y consultora de marketing digital.",
   openGraph: {
-    title: "Yury | TikTok Shop & Contenido",
+    title: "Yury Chacón | YC Noticias",
     description:
-      "Recomiendo lo que me encanta. Descubre mis tiendas, videos y media kit.",
+      "Noticias, marketing digital, Amazon y contenido. Descubre mis canales y media kit.",
     images: ["/assets/yurifoto.png"],
   },
   icons: {
-    icon: "/assets/yurifoto.png",
+    icon: [{ url: "/assets/Ycnoticas.png", type: "image/png" }],
+    apple: "/assets/Ycnoticas.png",
+    shortcut: "/assets/Ycnoticas.png",
   },
 };
 
@@ -39,8 +34,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
-      <body className={`${greatVibes.variable} ${poppins.variable}`}>
+    <html lang="es" className={oswald.variable}>
+      <body className={oswald.className}>
         <Providers>{children}</Providers>
       </body>
     </html>
