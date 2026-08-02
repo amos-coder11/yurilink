@@ -12,7 +12,34 @@ import {
 
 export type Lang = "es" | "en";
 
-const translations = {
+type Translations = {
+  heroAlt: string;
+  tiktokBeauty: string;
+  totalFollowers: string;
+  youtubeMore: string;
+  youtubeTitle: string;
+  youtubeAlt: string;
+  courses: string;
+  coursesMore: string;
+  coursesTitle: string;
+  coursesAlt: string;
+  amazonMore: string;
+  amazonTitle: string;
+  amazonAlt: string;
+  videos: string;
+  videosMore: string;
+  videoTitles: {
+    v1: string;
+    v2: string;
+    v3: string;
+    v4: string;
+  };
+  language: string;
+  spanish: string;
+  english: string;
+};
+
+const translations: Record<Lang, Translations> = {
   es: {
     heroAlt: "Yury, creadora de contenido",
     tiktokBeauty: "TikTok Belleza",
@@ -65,9 +92,7 @@ const translations = {
     spanish: "Español",
     english: "English",
   },
-} as const;
-
-type Translations = (typeof translations)["es"];
+};
 
 type I18nContextValue = {
   lang: Lang;
