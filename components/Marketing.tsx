@@ -4,7 +4,7 @@ import Image from "next/image";
 import { LinkIcon } from "./icons";
 import { useI18n } from "@/lib/i18n";
 
-const COURSE_URL = "https://www.instagram.com/yuryccb";
+const COURSE_URL = "https://www.instagram.com/ycnoticias";
 
 export function Marketing() {
   const { t } = useI18n();
