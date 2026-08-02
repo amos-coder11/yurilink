@@ -56,10 +56,10 @@ export function Hero() {
           </a>
           <a
             className="hero-social tiktok"
-            href="https://www.tiktok.com/@hisweetiesbeauty"
+            href="https://www.tiktok.com/@yc.noticias"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={t.tiktokBeauty}
+            aria-label={t.tiktokNews}
           >
             <TikTokIcon size={20} />
           </a>

@@ -15,6 +15,7 @@ export type Lang = "es" | "en";
 type Translations = {
   heroAlt: string;
   tiktokBeauty: string;
+  tiktokNews: string;
   totalFollowers: string;
   youtubeMore: string;
   youtubeTitle: string;
@@ -43,6 +44,7 @@ const translations: Record<Lang, Translations> = {
   es: {
     heroAlt: "Yury, creadora de contenido",
     tiktokBeauty: "TikTok Belleza",
+    tiktokNews: "TikTok Noticias",
     totalFollowers: "Seguidores totales",
     youtubeMore: "Ver canal ›",
     youtubeTitle: "YC Noticias | Noticias del día",
@@ -69,6 +71,7 @@ const translations: Record<Lang, Translations> = {
   en: {
     heroAlt: "Yury, content creator",
     tiktokBeauty: "TikTok Beauty",
+    tiktokNews: "TikTok News",
     totalFollowers: "Total Followers",
     youtubeMore: "View channel ›",
     youtubeTitle: "YC News | News of the day",
